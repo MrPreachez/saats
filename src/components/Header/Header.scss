@@ -1,0 +1,44 @@
+@use "../../styles/partials/global";
+@use "../../styles/partials/resets";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+
+.nav {
+  &__section {
+    background-color: $primaryA;
+  }
+  &__limit {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__links--wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+  }
+  &__link {
+
+    text-decoration: none;
+    color: black;
+    font-family: $font-stack;
+  }
+  &__link--tablet-only {
+    display: none;
+
+    @include tablet {
+        display:block;
+    }
+  }
+
+  &__link--logo {
+    font-family: $font-stack;
+  }
+  &__resumeBtn {
+    width: 8rem;
+  }
+}

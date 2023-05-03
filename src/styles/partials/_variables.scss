@@ -1,0 +1,20 @@
+@use "./typography";
+
+$font-stack: "open-sans" ;
+
+
+$primaryA: #CCD5AE;
+$primaryB: #D4A373;
+$primaryC: #FEFAE0;
+
+$secondaryA: #E9EDC9;
+$secondaryB: #FAEDCD;
+$secondaryC: #DAD7CD;
+
+
+$tabletBreakpoint: 768px;
+$desktopBreakpoint: 1280px;
+
+$maxContentWidth: 1020px;
+
+$shadow: 0.5rem 0.4rem 0.4rem $secondaryC;

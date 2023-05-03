@@ -1,0 +1,68 @@
+@use "../../styles/partials/global";
+@use "../../styles/partials/resets";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  &__section {
+    background-color: $primaryA;
+    padding: 4rem;
+    min-height: 18rem;
+  }
+  &__container {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__block1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  &__icon-block {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 1rem;
+  }
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
+  &__member-text {
+    font-weight: bold;
+  }
+  &__block2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 6rem;
+  }
+  &__contact--wrapper {
+    display: flex;
+  }
+  &__email--link {
+    color: black;
+    text-decoration: none;
+  }
+  &__email-icon {
+    width: 2.4rem;
+  }
+  &__copy {
+    font-size: 1.4rem;
+  }
+  &__address-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .2rem;
+    padding-top: 2rem;
+
+  }
+}

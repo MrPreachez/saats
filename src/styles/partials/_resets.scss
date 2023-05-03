@@ -1,0 +1,61 @@
+@use "./variables" as *;
+@use "./typography";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font-stack;
+  margin: 0;
+  width: 100%;
+
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 6.2rem;
+    margin: 0;
+  }
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 3rem;
+    margin: 0;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+    margin: 0;
+  }
+  h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+    margin: 0;
+  }
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  text-decoration: none;
+}
+label {
+  font-size: 1.4rem;
+  color: $primaryB;
+  padding: 0 0 0.5rem 1.6rem;
+}
