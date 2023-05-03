@@ -1,0 +1,147 @@
+@use "../../styles/partials/global";
+@use "../../styles/partials/resets";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+
+.homePage {
+  &__body {
+    width: 100%;
+  }
+}
+.head {
+  &__body {
+    
+    max-width: 50rem;
+    margin: 0 auto 6rem auto;
+
+    @include tablet {
+      max-width: 60rem;
+      height: 50rem;
+    }
+  }
+  &__title-position {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 10rem;
+    
+    @include tablet {
+      margin-top: 20rem; 
+    }
+  }
+
+  &__title1 {
+    font-size: 5rem;
+    // font-family: $font-stack;
+    font-weight: 700;
+    width: 90%;
+  }
+  &__title2 {
+    margin-right: 2rem;
+    font-size: 3rem;
+    
+  }
+  &__description-position {
+    margin: 6rem 1.2rem 0 2rem;
+    padding: 0 0 6rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 30rem;
+    @include tablet {
+      margin: 10rem 0 0 2rem;
+      
+    }
+  }
+  &__description-title {
+    padding-bottom: 1rem;
+  }
+  &__description {
+    
+    text-align: left;
+    padding-left: 1rem;
+
+
+    @include tablet {
+      padding-left: 2rem;
+    }
+  }
+}
+.projects {
+  &__body {
+    height: auto;
+    background-color: $secondaryB;
+    font-family: $font-stack;
+    padding: 2rem 1rem 6rem 1rem;
+    @include tablet {
+        padding: 8rem 2rem;
+    }
+  }
+  &__title {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    @include tablet {
+      padding-bottom: 2rem;
+  }
+}
+
+
+  &__feature {
+    border-top: 1px solid $secondaryC;
+    margin-top: 1.5rem;
+    width: 20rem;
+  }
+  
+}
+.about {
+  &__body {
+    height: auto;
+    font-family: $font-stack;
+    padding: 2rem 1rem 6rem 1rem;
+    @include tablet {
+        padding: 8rem 2rem;
+    }
+  }
+  &__title {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    @include tablet {
+      padding-bottom: 2rem;
+    }
+  }
+  &__feature {
+    border-top: 1px solid $secondaryA;
+    margin-top: 1.5rem;
+    width: 20rem;
+  }
+  &__container--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text {
+    max-width: 46rem;
+    margin: 2rem;
+  }
+
+  &__imgPhoto {
+    max-width: 24rem;
+    border-radius: 2px;
+    box-shadow: $shadow;
+  }
+}
+
+.details {
+  &__body {
+    height: 20rem;
+    background-color: $secondaryB;
+  }
+}
