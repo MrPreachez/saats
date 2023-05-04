@@ -10,14 +10,26 @@
   }
 }
 .head {
+  &__hero {
+    max-width: 100%;
+    height: 70rem;
+    background-image: url("../../assets/images/heroView.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include tablet {
+      height: 100rem;
+    }
+  }
   &__body {
-    
     max-width: 50rem;
     margin: 0 auto 6rem auto;
+    font-weight: bold;
 
     @include tablet {
       max-width: 60rem;
-      height: 50rem;
+      //   height: 50rem;
     }
   }
   &__title-position {
@@ -26,9 +38,9 @@
     flex-direction: column;
     align-items: flex-end;
     padding-top: 10rem;
-    
+
     @include tablet {
-      margin-top: 20rem; 
+      padding-top: 20rem;
     }
   }
 
@@ -37,49 +49,29 @@
     // font-family: $font-stack;
     font-weight: 700;
     width: 90%;
+    @include tablet {
+      font-size: 6rem;
+    }
   }
   &__title2 {
     margin-right: 2rem;
-    font-size: 3rem;
-    
-  }
-  &__description-position {
-    margin: 6rem 1.2rem 0 2rem;
-    padding: 0 0 6rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    max-width: 30rem;
+    font-size: 3.5rem;
     @include tablet {
-      margin: 10rem 0 0 2rem;
-      
-    }
-  }
-  &__description-title {
-    padding-bottom: 1rem;
-  }
-  &__description {
-    
-    text-align: left;
-    padding-left: 1rem;
-
-
-    @include tablet {
-      padding-left: 2rem;
+      font-size: 4.5rem;
     }
   }
 }
-.projects {
+.mission {
   &__body {
     height: auto;
-    background-color: $secondaryB;
+    background-color: $primaryC;
     font-family: $font-stack;
     padding: 2rem 1rem 6rem 1rem;
     @include tablet {
-        padding: 8rem 2rem;
+      padding: 8rem 2rem;
     }
   }
+
   &__title {
     margin: 2rem;
     display: flex;
@@ -87,24 +79,36 @@
     gap: 1.5rem;
     @include tablet {
       padding-bottom: 2rem;
-  }
-}
-
-
+    }
+  }  
   &__feature {
-    border-top: 1px solid $secondaryC;
+    border-top: 1px solid black;
     margin-top: 1.5rem;
     width: 20rem;
   }
-  
+  &__description-title {
+    padding-bottom: 1rem;
+  }
+
+  &__description {
+    text-align: left;
+    padding-left: 1rem;
+    z-index:2;
+
+    @include tablet {
+      padding-left: 2rem;
+    }
+  }
+
 }
-.about {
+.current {
   &__body {
     height: auto;
     font-family: $font-stack;
     padding: 2rem 1rem 6rem 1rem;
+    background-color: $primaryB;
     @include tablet {
-        padding: 8rem 2rem;
+      padding: 8rem 2rem;
     }
   }
   &__title {
