@@ -1,0 +1,15 @@
+@use "../../styles/partials/global";
+@use "../../styles/partials/resets";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+
+
+.burger__icon{
+    width: 3.4rem;
+    // margin-top: 1rem;
+
+    @include tablet {
+        display: none;
+    }
+}
