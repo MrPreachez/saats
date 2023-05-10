@@ -71,7 +71,7 @@ const Header = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
         <div className="nav__container">
           <div className="nav__links--wrapper">
             <a
-              href="/"
+              href="#about"
               className="nav__link nav__link--tablet-only"
               onClick={handleAboutLinkClick}
             >
@@ -86,7 +86,7 @@ const Header = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
             </a>
             <div>
               <a
-                href="#"
+                href="#news"
                 className="nav__link"
                 onClick={handleFooterLinkClick}
               >

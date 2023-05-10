@@ -103,7 +103,7 @@ const HomePage = forwardRef(({aboutSectionRef, newsSectionRef}, ref) => {
               About
               <span className="org__feature" />
             </h2>
-            <div className="about__section" ref={aboutSectionRef}>
+            <div className="about__section" id="about" ref={aboutSectionRef}>
               <h3 className="about__title">Slocan and Area Trail Society</h3>
               <p className="about__intro">
                 Welcome to SATS, a non-profit society dedicated to preserving
@@ -167,7 +167,7 @@ const HomePage = forwardRef(({aboutSectionRef, newsSectionRef}, ref) => {
           </section>
         </div>
       </section>
-      <section className="current__body" ref={newsSectionRef}>
+      <section className="current__body" id="news" ref={newsSectionRef}>
         <h2 className="current__title">
           <span className="current__feature" />
           Current Activities

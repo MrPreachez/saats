@@ -4,6 +4,31 @@
 @use "../../styles/partials/typography";
 @use "../../styles/partials/variables" as *;
 
+
+.CTA {
+    &__scrollTo--header {
+    background-color: $primaryA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    box-shadow: none;
+  }
+  &__scrollTo--header:hover{
+    border-bottom: 1.6px solid $primaryB;
+  }
+  &__scrollTo:hover {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  &__scrollTo {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+}
+
+
 .footer {
   &__section {
     background-color: $primaryA;
@@ -12,12 +37,36 @@
   }
   &__limit {
     max-width: 980px;
+    margin: 0 auto;
+  }
+  &__scrollTo--top{
+   margin-left: auto;
+   width: 18rem;
+  }
+  &__wrapper--box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include tablet {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
   }
   &__containerA {
     display: block;
+    padding-top:2rem;
+
+    @include tablet {
+        padding: 0rem 0 0 6rem;
+    }
+    @include desktop {
+        padding: 0 0 0 14rem;
+    }
   }
   &__containerB {
-    margin: 0 auto;
+    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -52,6 +101,15 @@
     align-items: flex-start;
     gap: 6rem;
   }
+  &__block3 {
+    padding-top:4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    
+    
+  }
   &__contact--wrapper {
     display: flex;
   }
@@ -74,7 +132,11 @@
     padding-top: 2rem;
     font-weight: 600;
   }
+
+ 
+ 
 }
+
 .menu {
   &__list {
     display: flex;
@@ -82,6 +144,24 @@
     align-items: start;
     gap: 0.5rem;
     padding-bottom: 2rem;
+  }
+  &__item--scroll {
+    border: none;
+    background-color: $primaryA;
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding:0;
+    height: 0;
+    
+  }
+  &__item--scroll:hover {
+    color: $primaryB;
+    text-decoration: underline $primaryB;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.3rem;
   }
   &__item--link {
     text-decoration: none;
@@ -108,8 +188,4 @@
     color: black;
   }
 }
-.chevron {
-  width: 2em;
-  font-weight: bold;
-  size: 4em;
-}
+
