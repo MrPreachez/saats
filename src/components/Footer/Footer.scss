@@ -4,17 +4,16 @@
 @use "../../styles/partials/typography";
 @use "../../styles/partials/variables" as *;
 
-
 .CTA {
-    &__scrollTo--header {
+  &__scrollTo--header {
     background-color: $primaryA;
     display: flex;
     justify-content: center;
     align-items: center;
-    border:none;
+    border: none;
     box-shadow: none;
   }
-  &__scrollTo--header:hover{
+  &__scrollTo--header:hover {
     border-bottom: 1.6px solid $primaryB;
   }
   &__scrollTo:hover {
@@ -22,12 +21,11 @@
     font-weight: bold;
   }
   &__scrollTo {
+    font-family: $font-stack;
     font-size: 1.6rem;
     font-weight: 600;
   }
-
 }
-
 
 .footer {
   &__section {
@@ -39,34 +37,33 @@
     max-width: 980px;
     margin: 0 auto;
   }
-  &__scrollTo--top{
-   margin-left: auto;
-   width: 18rem;
+  &__scrollTo--top {
+    margin-left: auto;
+    width: 18rem;
   }
-  &__wrapper--box{
+  &__wrapper--box {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 
     @include tablet {
-        flex-direction: row-reverse;
-        justify-content: flex-end;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
     }
   }
   &__containerA {
     display: block;
-    padding-top:2rem;
+    padding-top: 2rem;
 
     @include tablet {
-        padding: 0rem 0 0 6rem;
+      padding: 0rem 0 0 6rem;
     }
     @include desktop {
-        padding: 0 0 0 14rem;
+      padding: 0 0 0 14rem;
     }
   }
   &__containerB {
-    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -102,13 +99,10 @@
     gap: 6rem;
   }
   &__block3 {
-    padding-top:4rem;
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    
-    
-    
   }
   &__contact--wrapper {
     display: flex;
@@ -132,18 +126,15 @@
     padding-top: 2rem;
     font-weight: 600;
   }
-
- 
- 
 }
 
 .menu {
   &__list {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 0.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
   }
   &__item--scroll {
     border: none;
@@ -151,9 +142,8 @@
     color: black;
     font-size: 1.8rem;
     font-weight: 600;
-    padding:0;
+    padding: 0;
     height: 0;
-    
   }
   &__item--scroll:hover {
     color: $primaryB;
@@ -188,4 +178,3 @@
     color: black;
   }
 }
-

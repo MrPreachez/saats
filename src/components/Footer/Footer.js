@@ -1,16 +1,13 @@
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-// import DownloadPdf from "../DownloadPdf/DownloadPdf";
-// import github from "../../assets/icons/icons8-github-logo-24.png";
 import instagram from "../../assets/icons/instagram-f-svgrepo-com.svg";
 import envelope from "../../assets/icons/envelope-solid.svg";
 import { FiChevronsUp } from "react-icons/fi";
 import "./Footer.scss";
-import { forwardRef, useRef } from "react";
+import { forwardRef } from "react";
 
 const Footer = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
   const navigate = useNavigate();
   const location = useLocation();
-  
 
   const scrollToAboutSection = () => {
     if (aboutSectionRef.current) {
@@ -48,13 +45,12 @@ const Footer = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
       scrollToNewsSection();
     }
   };
-  
+
   const handleHeaderLinkClick = (e) => {
     e.preventDefault();
     const footer = document.getElementsByClassName("nav__section")[0];
     footer.scrollIntoView({ behavior: "smooth", block: "start" });
   };
-
 
   return (
     <div className="footer__section">
@@ -73,17 +69,29 @@ const Footer = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
             <div className="menu__block">
               <ul className="menu__list">
                 <li>
-                  <a href="#about" className="menu__item--link" onClick={handleAboutLinkClick}>About</a>
+                  <a
+                    href="#about"
+                    className="menu__item--link"
+                    onClick={handleAboutLinkClick}
+                  >
+                    About
+                  </a>
                 </li>
 
                 <li className="menu__listItem">
-                  <a href="#news" className="menu__item--link" onClick={handleNewsLinkClick}>News</a>
+                  <a
+                    href="#news"
+                    className="menu__item--link"
+                    onClick={handleNewsLinkClick}
+                  >
+                    News
+                  </a>
                 </li>
                 <li className="menu__listItem">
                   <Link className="menu__item--link">Trails</Link>
                 </li>
                 <li className="menu__listItem">
-                  <Link className="menu__item--link">Membership</Link>
+                  <Link to="/membership" className="menu__item--link">Membership</Link>
                 </li>
                 <li className="menu__listItem">
                   <Link className="menu__item--link">Donate</Link>
@@ -122,18 +130,17 @@ const Footer = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
               </div>
             </div>
           </div>
-          </div>
-          <div className="footer__block3">
-            <p className="footer__copy">
-              &#169;Slocan and Area Trail Society 2023
-            </p>
+        </div>
+        <div className="footer__block3">
+          <p className="footer__copy">
+            &#169;Slocan and Area Trail Society 2023
+          </p>
 
-            <p className="brand__text">
-              Website:Damon Chouinard -{" "}
-              <Link className="brand__link">www.damonchouinard.ca</Link>
-            </p>
-          </div>
-        
+          <p className="brand__text">
+            Website:Damon Chouinard -{" "}
+            <Link className="brand__link">www.damonchouinard.ca</Link>
+          </p>
+        </div>
       </div>
     </div>
   );

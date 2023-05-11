@@ -2,6 +2,8 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage/HomePage";
+import MembershipPage from "./pages/MembershipPage/MembershipPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useRef } from "react";
@@ -25,8 +27,7 @@ function App() {
         <Header
           aboutSectionRef={aboutSectionRef}
           newsSectionRef={newsSectionRef}
-          // footerMenuRef={footerMenuRef}
-          // handleScrollTo={handleScrollTo}
+       
         />
         <Routes>
           <Route
@@ -36,17 +37,17 @@ function App() {
                 aboutSectionRef={aboutSectionRef}
                 newsSectionRef={newsSectionRef}
                 headerMenuRef={headerMenuRef}
-                // handleScrollTo={handleScrollTo}
+               
               />
             }
           />
-          {/* <Route path="/membership" element={<MembershipPage/>}/> */}
+          <Route path="/membership" element={<MembershipPage/>}/>
+          <Route path="/contact" element={<ContactPage/>}/>
         </Routes>
         <Footer
           aboutSectionRef={aboutSectionRef}
           newsSectionRef={newsSectionRef}
-          // headerMenuRef={headerMenuRef}
-          // handleScrollTo={handleScrollTo}
+        
         />
       </BrowserRouter>
     </div>

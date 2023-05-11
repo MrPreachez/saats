@@ -1,6 +1,6 @@
 import "./HomePage.scss";
 import map1 from "../../assets/images/Location Map of proposed area .png";
-import map2 from "../../assets/images/Map of Proposed work area.png";
+// import map2 from "../../assets/images/Map of Proposed work area.png";
 import { useSpring, useInView, animated as a } from "@react-spring/web";
 import { Link } from "react-router-dom";
 import { forwardRef } from "react";
