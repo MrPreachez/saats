@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import instagram from "../../assets/icons/instagram-f-svgrepo-com.svg";
 import envelope from "../../assets/icons/envelope-solid.svg";
 import { FiChevronsUp } from "react-icons/fi";
