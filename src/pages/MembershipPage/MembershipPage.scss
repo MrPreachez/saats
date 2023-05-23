@@ -31,7 +31,7 @@
     background-color: rgba(125,125,125,0.6);
   }
 }
-.member {
+.memberHero {
   &__body {
     max-width: 50rem;
     margin: 0 auto;
@@ -44,19 +44,44 @@
   &__title--position {
     display: flex;
     flex-direction: column;
-    padding: 10rem 2rem;
+    padding: 6rem 2rem;
   }
   &__title1 {
     font-family: $font-stack;
     font-size: 4rem;
     line-height: 5rem;
-    color: Black;
+    color: rgb(40, 40, 40);
   }
   &__title2 {
     font-family: $font-stack;
     font-size: 3.6rem;
     line-height: 4rem;
-    color: black;
-    padding-top: 2rem;
+    font-weight: 700;
+    color: rgb(40, 40, 40);
+    padding-top: 4rem;
+  }
+}
+.memberInfo{
+    &__body {
+       padding:2rem 1rem;
+       background-color: $primaryC; 
+    }
+}
+.options {
+  &__body {
+    background-color: $secondaryA;
+    padding: 2rem;
+  }
+  &__card--contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__card{
+    margin: 2rem;
+    border: 1px solid black;
+    height: 28rem;
+    width: 20rem;
   }
 }
