@@ -54,13 +54,36 @@ function MembershipPage() {
         <h2 className="options__title">Membership</h2>
         <div className="options__card--contain">
           <div className="options__card-wrapA">
-            <section className="options__cardA options__card"></section>
+            <section className="options__cardA options__card">
+              <h3 className="options__title">General Membership</h3>
+              <h3 className="options__price">$15.00</h3>
+              <p className="options__details">
+                Get an anual membership and support SATS initiatives. Future
+                member perks will follow in time, but for now bask in the
+                opportunity to support local trail enhancement projects and
+                planning.
+              </p>
+              <button className="options__buyBTN">Buy</button>
+            </section>
           </div>
           <div className="options__card-wrapB">
-            <section className="options__cardB options__card"></section>
+            <section className="options__cardB options__card">
+              <h3 className="options__title">Business Membership</h3>
+              <h3 className="options__price">$100.00</h3>
+              <p className="options__details">
+                Your Businesses annual membership makes a big difference to
+                building and maintaining SATS. With your generous contribution
+                your logo will be highlighted on our sponsorship
+                page and on annual promotional material.  
+              </p>
+              <button className="options__buyBTN">Buy</button>
+            </section>
           </div>
         </div>
       </section>
+      <form className="memberform__body">
+        <input></input>
+      </form>
     </section>
   );
 }

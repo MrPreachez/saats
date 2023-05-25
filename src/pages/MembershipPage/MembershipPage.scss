@@ -81,7 +81,45 @@
   &__card{
     margin: 2rem;
     border: 1px solid black;
-    height: 28rem;
-    width: 20rem;
+    border-radius: 5px;
+    background-color: white;
+    height: 34rem;
+    width: 26rem;
+    padding: 1.4rem;
+    
+    &:hover{
+    border: 2px solid $primaryB;
+    box-shadow: 0.5rem 0.5rem 0.5rem $secondaryC;;
+    
+    .options__title{
+      font-weight: bold;
+    }
+
+    .options__buyBTN{
+      display: inline-block;
+    }
+  }
+  }
+  
+  &__title{
+    padding:1rem 0;
+    text-decoration: underline;
+  }
+  &__price{
+    padding-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  &__buyBTN{
+    height:4rem;
+    width: 12rem;
+    margin-top:1.2rem;
+    display:none;
+  }
+}
+.memberform {
+  &__body {
+    height: 30rem;
+    background-color: $primaryC;
   }
 }
