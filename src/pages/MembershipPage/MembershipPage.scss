@@ -18,17 +18,17 @@
     box-shadow: 0 0.4rem 0.4rem $secondaryC;
     position: relative;
     z-index: 1;
-    
+
     @include tablet {
       height: 100rem;
     }
   }
-  &__filter{
+  &__filter {
     width: 100%;
-    height:100%;
+    height: 100%;
     position: relative;
     z-index: 2;
-    background-color: rgba(125,125,125,0.6);
+    background-color: rgba(125, 125, 125, 0.6);
   }
 }
 .memberHero {
@@ -61,65 +61,138 @@
     padding-top: 4rem;
   }
 }
-.memberInfo{
-    &__body {
-       padding:2rem 1rem;
-       background-color: $primaryC; 
-    }
+.memberInfo {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__body {
+    padding: 4rem 1rem 2rem 1rem;
+    background-color: $primaryC;
+  }
+  &__title {
+    // padding-top: 2rem;
+  }
+  &__details {
+    padding: 2rem;
+  }
+  &__benefits {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 3rem;
+  }
+  &__item {
+    font-weight: bold;
+    line-height: 2.2rem;
+  }
 }
 .options {
   &__body {
     background-color: $secondaryA;
     padding: 2rem;
   }
-  &__card--contain{
+  &__card--contain {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  &__card{
+  &__card {
     margin: 2rem;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: white;
-    height: 34rem;
+    background-color: rgb(246, 242, 242);
+    height: 36rem;
     width: 26rem;
-    padding: 1.4rem;
-    
-    &:hover{
-    border: 2px solid $primaryB;
-    box-shadow: 0.5rem 0.5rem 0.5rem $secondaryC;;
-    
-    .options__title{
-      font-weight: bold;
-    }
+    padding: 1.4rem ;
 
-    .options__buyBTN{
-      display: inline-block;
+    &:hover {
+      border: 2px solid $primaryB;
+      box-shadow: 0.5rem 0.5rem 0.5rem $secondaryC;
+
+      .options__title {
+        font-weight: bold;
+      }
+
+      .options__buyBTN {
+        display: inline-block;
+      }
     }
   }
-  }
-  
-  &__title{
-    padding:1rem 0;
+
+  &__title {
+    padding: 1rem 0rem;
     text-decoration: underline;
   }
-  &__price{
+  &__price {
     padding-bottom: 1rem;
     font-size: 3rem;
     font-weight: 700;
   }
-  &__buyBTN{
-    height:4rem;
+  &__details{
+    padding:1rem 0rem;
+  }
+  &__buyBTN {
+    height: 4rem;
     width: 12rem;
-    margin-top:1.2rem;
-    display:none;
+    margin-top: 1.2rem;
+    display: none;
   }
 }
-.memberform {
+.donate {
   &__body {
-    height: 30rem;
     background-color: $primaryC;
+    padding: 2rem 1rem 4rem 1rem;
+  }
+  &__heading {
+    text-align: underline;
+  }
+  &__card {
+    margin: 2rem auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(246, 242, 242);
+    height: 36rem;
+    width: 26rem;
+    padding: 1.4rem;
+
+    &:hover {
+      border: 2px solid $primaryB;
+      box-shadow: 0.5rem 0.5rem 0.5rem $secondaryC;
+
+      .donate__title {
+        font-weight: bold;
+      }
+
+      .donate__buyBTN {
+        display: inline-block;
+      }
+    }
+  }
+  &__title {
+    padding: 1rem 0;
+    text-decoration: underline;
+  }
+  &__price {
+    padding-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  &__details {
+    padding: 4rem 0 2rem 0;
+  }
+  &__text{
+    padding: 2rem 1rem;
+  }
+  &__buyBTN {
+    height: 4rem;
+    width: 12rem;
+    margin-top: 1.2rem;
+    display: none;
   }
 }

@@ -16,39 +16,46 @@ function MembershipPage() {
         </div>
       </section>
       <section className="memberInfo__body">
-        <h2>Society Membership</h2>
-        <p>
-          SAATS is more than just a non-profit society - we are a community of
-          passionate individuals dedicated to preserving and improving access to
-          the backcountry roads and trails we love. As a member of SATS, you
-          will have the opportunity to connect with like-minded individuals who
-          share your interests and values. Our community is diverse and
-          welcoming, with members ranging from hikers and bikers, ATV’ers, horse
-          enthusiasts and everything in between. We believe that everyone should
-          have access to our backcountry areas, and our members share a
-          commitment to preserving and improving that access in a responsible
-          way. As a member of SATS, you will have access to a variety of
-          benefits, including:
-        </p>
-        <ul>
-          <li>* Access to exclusive events and volunteer opportunities</li>
-          <li>
-            * Opportunities to connect with other trail users and share your
-            experiences
-          </li>
-          <li>* Future special offers that we hope to include</li>
-          <li>
-            * The opportunity to play a role in the future of backcountry access
-            and trail development in our community
-          </li>
-        </ul>
-        <p>
-          We believe that our members are the heart and soul of SAATS, and we
-          are committed to providing a supportive and inclusive community for
-          all. Whether you're a seasoned trail veteran or just starting out, we
-          welcome you to join us and help us build a brighter future for
-          backcountry road access and trail development around Slocan.
-        </p>
+        <h2 className="memberInfo__title">Society Membership</h2>
+        <div className="memberInfo__container">
+          <p className="memberInfo__details">
+            SAATS is more than just a non-profit society - we are a community of
+            passionate individuals dedicated to preserving and improving access
+            to the backcountry roads and trails we love. As a member of SATS,
+            you will have the opportunity to connect with like-minded
+            individuals who share your interests and values. Our community is
+            diverse and welcoming, with members ranging from hikers and bikers,
+            ATV’ers, horse enthusiasts and everything in between. We believe
+            that everyone should have access to our backcountry areas, and our
+            members share a commitment to preserving and improving that access
+            in a responsible way. As a member of SATS, you will have access to a
+            variety of benefits, including:
+          </p>
+          <div className="memberInfo__benefits-conatainer"></div>
+          <ul className="memberInfo__benefits">
+            <li className="memberInfo__item">
+              Access to exclusive events and volunteer opportunities
+            </li>
+            <li className="memberInfo__item">
+              Opportunities to connect with other trail users and share your
+              experiences
+            </li>
+            <li className="memberInfo__item">
+              Future special offers that we hope to include
+            </li>
+            <li className="memberInfo__item">
+              The opportunity to play a role in the future of backcountry access
+              and trail development in our community
+            </li>
+          </ul>
+          <p className="memberInfo__details">
+            We believe that our members are the heart and soul of SAATS, and we
+            are committed to providing a supportive and inclusive community for
+            all. Whether you're a seasoned trail veteran or just starting out,
+            we welcome you to join us and help us build a brighter future for
+            backcountry road access and trail development around Slocan.
+          </p>
+        </div>
       </section>
       <section className="options__body">
         <h2 className="options__title">Membership</h2>
@@ -73,17 +80,40 @@ function MembershipPage() {
               <p className="options__details">
                 Your Businesses annual membership makes a big difference to
                 building and maintaining SATS. With your generous contribution
-                your logo will be highlighted on our sponsorship
-                page and on annual promotional material.  
+                your logo will be highlighted on our sponsorship page and on
+                annual promotional material.
               </p>
               <button className="options__buyBTN">Buy</button>
             </section>
           </div>
         </div>
       </section>
-      <form className="memberform__body">
-        <input></input>
-      </form>
+      <section className="donate__body">
+        <h2 className="donate__heading">Donate to SATS</h2>
+        <h4 className="donate__subheading">Support Our Efforts</h4>
+
+        <section className="donate__card">
+          <h2 className="donate__title">Donation</h2>
+          <h3 className="donate__price">$$$$</h3>
+          <p className="donate__details">
+            A donation to SATS keeps the chain oiled, increases our capacities
+            and goes directly back into the process of building and sustaining
+            trails in the Slocan Area.
+          </p>
+          <button className="donate__buyBTN">Donate</button>
+        </section>
+        <p className="donate__text">
+          A donation to SATS goes back into your community. All donations will
+          be used for operations directly related to trail maintenance and
+          building new trails in the Area. We will keep our members informed to
+          our activities as much as possible through our website and social
+          media channels. We greatly appreciate all donations, whether its $10
+          or $1000, it all makes a difference. With a generous donation of{" "}
+          <b>$300</b> and up, you can request to have your name or business logo
+          added to our 'Community Supporters' section and promotional material
+          for one year.
+        </p>
+      </section>
     </section>
   );
 }
