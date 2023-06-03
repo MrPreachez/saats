@@ -1,8 +1,10 @@
+import { forwardRef } from "react";
 import "./MembershipPage.scss";
 
-function MembershipPage() {
+
+const MembershipPage = forwardRef(({memberTopRef, donateSectionRef}, ref)=> {
   return (
-    <section className="memberpage">
+    <section className="memberpage" id="memberTop" ref={memberTopRef}>
       <section className="memberpage__hero">
         <div className="memberpage__filter">
           <div className="memberHero__body">
@@ -88,7 +90,7 @@ function MembershipPage() {
           </div>
         </div>
       </section>
-      <section className="donate__body">
+      <section className="donate__body" id="donateSection" ref={donateSectionRef}>
         <h2 className="donate__heading">Donate to SATS</h2>
         <h4 className="donate__subheading">Support Our Efforts</h4>
 
@@ -116,6 +118,6 @@ function MembershipPage() {
       </section>
     </section>
   );
-}
+})
 
 export default MembershipPage;

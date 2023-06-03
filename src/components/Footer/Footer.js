@@ -5,7 +5,7 @@ import { FiChevronsUp } from "react-icons/fi";
 import "./Footer.scss";
 import { forwardRef } from "react";
 
-const Footer = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
+const Footer = forwardRef(({ aboutSectionRef, newsSectionRef, memberTopRef, donateSectionRef }, ref) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -26,6 +26,23 @@ const Footer = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
       });
     }
   };
+
+const scrollToTopSection = () => {
+  if (memberTopRef.current){
+    memberTopRef.current.scrollIntoView({
+      behavior: "smooth",
+      top: 0
+    })
+  }
+}
+const scrollToDonate = () => {
+  if (donateSectionRef.current){
+    donateSectionRef.current.scrollIntoView({
+      bevior: "smooth",
+      block: 'center'
+    })
+  }
+}
 
   const handleAboutLinkClick = (e) => {
     e.preventDefault();
@@ -51,6 +68,27 @@ const Footer = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
     const footer = document.getElementsByClassName("nav__section")[0];
     footer.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
+  const handleMemberPageClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/membership") {
+      navigate("/membership");
+      setTimeout(scrollToTopSection, 500);
+    } else {
+      scrollToTopSection();
+    }
+  };
+  const handleDonateSectionClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/membership") {
+      navigate("/membership");
+      setTimeout(scrollToDonate, 500);
+    } else {
+      scrollToDonate();
+    }
+  };
+
+
 
   return (
     <div className="footer__section">
@@ -91,10 +129,18 @@ const Footer = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
                   <Link className="menu__item--link">Trails</Link>
                 </li>
                 <li className="menu__listItem">
-                  <Link to="/membership" className="menu__item--link">Membership</Link>
+                  <a 
+                  href="#memberTop"
+                  className="menu__item--link"
+                  onClick={handleMemberPageClick}
+                  >Membership</a>
                 </li>
                 <li className="menu__listItem">
-                  <Link className="menu__item--link">Donate</Link>
+                  <a 
+                  href="#donateSection"
+                  className="menu__item--link"
+                  onClick={handleDonateSectionClick}
+                  >Donate</a>
                 </li>
               </ul>
             </div>
@@ -137,7 +183,7 @@ const Footer = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
           </p>
 
           <p className="brand__text">
-            Website:Damon Chouinard -{" "}
+            Website:{" "}
             <Link className="brand__link">www.damonchouinard.ca</Link>
           </p>
         </div>
