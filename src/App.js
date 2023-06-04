@@ -36,6 +36,8 @@ function App() {
                 aboutSectionRef={aboutSectionRef}
                 newsSectionRef={newsSectionRef}
                 headerMenuRef={headerMenuRef}
+                memberTopRef={memberTopRef}
+                donateSectionRef={donateSectionRef}
               />
             }
           />

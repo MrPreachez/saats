@@ -2,10 +2,15 @@ import "./HomePage.scss";
 import map1 from "../../assets/images/Location Map of proposed area .png";
 // import map2 from "../../assets/images/Map of Proposed work area.png";
 import { useSpring, useInView, animated as a } from "@react-spring/web";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { forwardRef } from "react";
 
-const HomePage = forwardRef(({aboutSectionRef, newsSectionRef}, ref) => {
+
+
+const HomePage = forwardRef(({aboutSectionRef, newsSectionRef, memberTopRef, donateSectionRef}, ref) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const spring1 = useSpring({
     from: { opacity: 0, x: 200 },
     to: { opacity: 1, x: 0 },
@@ -76,6 +81,40 @@ const HomePage = forwardRef(({aboutSectionRef, newsSectionRef}, ref) => {
       },
     },
   }));
+  const scrollToTopSection = () => {
+    if (memberTopRef.current){
+      memberTopRef.current.scrollIntoView({
+        behavior: "smooth",
+        top: 0
+      })
+    }
+  }
+  const scrollToDonate = () => {
+    if (donateSectionRef.current){
+      donateSectionRef.current.scrollIntoView({
+        bevior: "smooth",
+        block: 'center'
+      })
+    }
+  }
+  const handleMemberPageClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/membership") {
+      navigate("/membership");
+      setTimeout(scrollToTopSection, 500);
+    } else {
+      scrollToTopSection();
+    }
+  };
+  const handleDonateSectionClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/membership") {
+      navigate("/membership");
+      setTimeout(scrollToDonate, 500);
+    } else {
+      scrollToDonate();
+    }
+  };
 
   return (
     <main className="homePage__body">
@@ -90,8 +129,8 @@ const HomePage = forwardRef(({aboutSectionRef, newsSectionRef}, ref) => {
             </a.h2>
           </div>
           <div className="head__CTA--position">
-            <button className="head__CTA-member head__CTA">Become a Member</button>
-            <button className="head__CTA-donate head__CTA">Make a Donation</button>
+            <button className="head__CTA-member head__CTA" onClick={handleMemberPageClick}>Become a Member</button>
+            <button className="head__CTA-donate head__CTA" onClick={handleDonateSectionClick}>Make a Donation</button>
           </div>
         </div>
       </section>
