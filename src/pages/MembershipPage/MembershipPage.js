@@ -1,8 +1,16 @@
 import { forwardRef } from "react";
 import "./MembershipPage.scss";
+import { useNavigate } from "react-router-dom";
 
 
-const MembershipPage = forwardRef(({memberTopRef, donateSectionRef}, ref)=> {
+const MembershipPage = forwardRef(({ memberTopRef, donateSectionRef }, ref) => {
+  const navigate = useNavigate();
+  const handleGeneralMemberBtn = () => {
+    navigate("/memberform")
+  }
+  const handleBusinessMemberBtn = () => {
+    navigate("/memberform")
+  }
   return (
     <section className="memberpage" id="memberTop" ref={memberTopRef}>
       <section className="memberpage__hero">
@@ -72,7 +80,7 @@ const MembershipPage = forwardRef(({memberTopRef, donateSectionRef}, ref)=> {
                 opportunity to support local trail enhancement projects and
                 planning.
               </p>
-              <button className="options__buyBTN">Buy</button>
+              <button onClick={handleGeneralMemberBtn}className="options__buyBTN">Buy</button>
             </section>
           </div>
           <div className="options__card-wrapB">
@@ -85,12 +93,18 @@ const MembershipPage = forwardRef(({memberTopRef, donateSectionRef}, ref)=> {
                 your logo will be highlighted on our sponsorship page and on
                 annual promotional material.
               </p>
-              <button className="options__buyBTN">Buy</button>
+              <button 
+              onClick={handleBusinessMemberBtn}
+              className="options__buyBTN">Buy</button>
             </section>
           </div>
         </div>
       </section>
-      <section className="donate__body" id="donateSection" ref={donateSectionRef}>
+      <section
+        className="donate__body"
+        id="donateSection"
+        ref={donateSectionRef}
+      >
         <h2 className="donate__heading">Donate to SATS</h2>
         <h4 className="donate__subheading">Support Our Efforts</h4>
 
@@ -118,6 +132,6 @@ const MembershipPage = forwardRef(({memberTopRef, donateSectionRef}, ref)=> {
       </section>
     </section>
   );
-})
+});
 
 export default MembershipPage;

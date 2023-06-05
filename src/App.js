@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage/HomePage";
 import MembershipPage from "./pages/MembershipPage/MembershipPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import MemberForm from "./pages/MemberForm/MemberForm";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useRef } from "react";
 import React from "react";
@@ -51,6 +52,8 @@ function App() {
             }
           />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/memberForm" element={<MemberForm/>} />
+          {/* <Route path="/donateForm" element={<DonateForm/>} /> */}
         </Routes>
         <Footer
           aboutSectionRef={aboutSectionRef}

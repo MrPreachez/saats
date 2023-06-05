@@ -1,18 +1,18 @@
-import "./ContactPage.scss"
+import "./ContactPage.scss";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-function ContactPage(){
-    const form = useRef();
+function ContactPage() {
+  const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_b5v6xym",
-        "contact_form",
+        "default_service",
+        "template_69jhlbc",
         form.current,
-        "Eke_eWLPEeWg5w8Yi"
+        "AsXnJHA7LiVbtOW3g"
       )
       .then(
         (result) => {
@@ -27,7 +27,8 @@ function ContactPage(){
 
   return (
     <main className="contact__section">
-      <h2 className="contact__title">Contact Damon by email</h2>
+      <h2 className="contact__title">Contact SATS</h2>
+      <p>To contact the Slocan and Area Trail Society, please fill out the contact form below and someone will get back to you as promptly as possible.</p>
       <form ref={form} onSubmit={sendEmail} className="contact__form">
         <div className="contact__subject--wrapper">
           <label className="contact__subject contact__label">Subject</label>
