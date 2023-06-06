@@ -8,6 +8,12 @@ const MemberForm = forwardRef(({ memberFormTopRef }, ref) => {
   const [volunteerCheckbox, setVolunteerCheckbox] = useState(false);
   const [activityCheckboxA, setActivityCheckboxA] = useState(false);
   const [activityCheckboxB, setActivityCheckboxB] = useState(false);
+  const [activityCheckboxC, setActivityCheckboxC] = useState(false);
+  const [activityCheckboxD, setActivityCheckboxD] = useState(false);
+  const [activityCheckboxE, setActivityCheckboxE] = useState(false);
+  const [activityCheckboxF, setActivityCheckboxF] = useState(false);
+  const [activityCheckboxG, setActivityCheckboxG] = useState(false);
+  const [activityCheckboxH, setActivityCheckboxH] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -45,15 +51,7 @@ const MemberForm = forwardRef(({ memberFormTopRef }, ref) => {
         className="memberform__form"
       >
         <div className="memberform__subject--wrapper">
-          <label className="memberform__subject memberform__label">
-            Subject
-          </label>
-          <input
-            className="memberform__subject-field memberform__field"
-            type="text"
-            placeholder="ENTER MESSAGE SUBJECT"
-            name="from_subject"
-          />
+          <h3 className="memberform__subject-title">Membership Form</h3>
         </div>
         <div className="memberform__name--wrapper">
           <label className="memberform__name memberform__label">
@@ -106,10 +104,13 @@ const MemberForm = forwardRef(({ memberFormTopRef }, ref) => {
           />
           <label className="memberform__volunteering memberform__label">
             Check the box if your are interested in hearing about volunteer
-            opportunities? Share more details about your skills below.
+            opportunities? Share more details about your interest and experience
+            below.
           </label>
         </div>
-        <p className="memberform__activity-title">What activities do you enjoy doing on local trails.</p>
+        <p className="memberform__activity-title">
+          What activities do you enjoy doing on local trails.
+        </p>
         <div className="memberform__activity-Container">
           <div className="memberform__activity--wrapperA">
             <input
@@ -121,7 +122,7 @@ const MemberForm = forwardRef(({ memberFormTopRef }, ref) => {
               onChange={(e) => setActivityCheckboxA(e.target.checked)}
             />
             <label className="memberform__volunteering memberform__label">
-              mountain biking
+              Mountain Biking
             </label>
           </div>
           <div className="memberform__activity--wrapperB">
@@ -137,6 +138,84 @@ const MemberForm = forwardRef(({ memberFormTopRef }, ref) => {
               Hiking
             </label>
           </div>
+          <div className="memberform__activity--wrapperC">
+            <input
+              className="activityCheckboxC memberform__field"
+              type="checkbox"
+              id="activityID"
+              checked={activityCheckboxC}
+              name="activityCheckboxC"
+              onChange={(e) => setActivityCheckboxC(e.target.checked)}
+            />
+            <label className="memberform__volunteering memberform__label">
+              Dirt Biking
+            </label>
+          </div>
+          <div className="memberform__activity--wrapperD">
+            <input
+              className="activityCheckboxD memberform__field"
+              type="checkbox"
+              id="activityID"
+              checked={activityCheckboxD}
+              name="activityCheckboxD"
+              onChange={(e) => setActivityCheckboxD(e.target.checked)}
+            />
+            <label className="memberform__volunteering memberform__label">
+              ATV-ing
+            </label>
+          </div>
+          <div className="memberform__activity--wrapperE">
+            <input
+              className="activityCheckboxE memberform__field"
+              type="checkbox"
+              id="activityID"
+              checked={activityCheckboxE}
+              name="activityCheckboxE"
+              onChange={(e) => setActivityCheckboxE(e.target.checked)}
+            />
+            <label className="memberform__volunteering memberform__label">
+              E-Biking
+            </label>
+          </div>
+          <div className="memberform__activity--wrapperF">
+            <input
+              className="activityCheckboxF memberform__field"
+              type="checkbox"
+              id="activityID"
+              checked={activityCheckboxF}
+              name="activityCheckboxF"
+              onChange={(e) => setActivityCheckboxF(e.target.checked)}
+            />
+            <label className="memberform__volunteering memberform__label">
+              Horseback Riding
+            </label>
+          </div>
+          <div className="memberform__activity--wrapperG">
+            <input
+              className="activityCheckboxG memberform__field"
+              type="checkbox"
+              id="activityID"
+              checked={activityCheckboxG}
+              name="activityCheckboxG"
+              onChange={(e) => setActivityCheckboxG(e.target.checked)}
+            />
+            <label className="memberform__volunteering memberform__label">
+              Snowmobiling
+            </label>
+          </div>
+          <div className="memberform__activity--wrapperH">
+            <input
+              className="activityCheckboxH memberform__field"
+              type="checkbox"
+              id="activityID"
+              checked={activityCheckboxH}
+              name="activityCheckboxH"
+              onChange={(e) => setActivityCheckboxH(e.target.checked)}
+            />
+            <label className="memberform__volunteering memberform__label">
+              Other
+            </label>
+          </div>
         </div>
 
         <div className="memberform__message--wrapper">
@@ -145,7 +224,7 @@ const MemberForm = forwardRef(({ memberFormTopRef }, ref) => {
           </label>
           <textarea
             className="memberform__message-field memberform__field"
-            placeholder="PLEASE SHARE ANY RELEVENT INFORMATION ABOUT YOURSELF"
+            placeholder="PLEASE SHARE ANY RELEVENT SKILLS, INTERESTS OR IDEAS"
             name="message"
           />
         </div>
