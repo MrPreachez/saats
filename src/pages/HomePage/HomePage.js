@@ -7,11 +7,11 @@ import { forwardRef } from "react";
 
 
 
-const HomePage = forwardRef(({aboutSectionRef, newsSectionRef, memberTopRef, donateSectionRef, memberFormTopRef}, ref) => {
+const HomePage = forwardRef(({homeTopRef, aboutSectionRef, newsSectionRef, memberTopRef, donateSectionRef}, ref) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const spring1 = useSpring({
+  const spring1 = useSpring({ 
     from: { opacity: 0, x: 200 },
     to: { opacity: 1, x: 0 },
     config: { mass: 4, friction: 100, tension: 200 },
@@ -117,7 +117,7 @@ const HomePage = forwardRef(({aboutSectionRef, newsSectionRef, memberTopRef, don
   };
 
   return (
-    <main className="homePage__body">
+    <main className="homePage__body" ref={homeTopRef}>
       <section className="head__hero">
         <div className="head__body">
           <div className="head__title--position">
@@ -136,13 +136,13 @@ const HomePage = forwardRef(({aboutSectionRef, newsSectionRef, memberTopRef, don
       </section>
       <section className="org__block">
         <div className="org__container">
-          <section className="org__body" id="mission">
+          <section className="org__body" id="mission" ref={aboutSectionRef}>
             <h2 className="org__title">
               <span className="org__feature" />
               About
               <span className="org__feature" />
             </h2>
-            <div className="about__section" id="about" ref={aboutSectionRef}>
+            <div className="about__section" id="about" >
               <h3 className="about__title">Slocan and Area Trail Society</h3>
               <p className="about__intro">
                 Welcome to SATS, a non-profit society dedicated to preserving

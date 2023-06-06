@@ -38,7 +38,6 @@
 
     @include tablet {
       max-width: 60rem;
-      //   height: 50rem;
     }
   }
   &__title--position {
@@ -67,16 +66,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // max-width: 80rem;
   }
   &__body {
     padding: 4rem 1rem 2rem 1rem;
     background-color: $primaryC;
   }
   &__title {
-    // padding-top: 2rem;
+    @include tablet{
+      font-size: 4rem;
+    }
   }
   &__details {
     padding: 2rem;
+    line-height: 2.2rem;
+    letter-spacing: .5px;
+    @include tablet{
+      max-width: 80rem;
+    }
   }
   &__benefits {
     text-align: left;
@@ -85,10 +92,14 @@
     justify-content: center;
     align-items: flex-start;
     padding: 1rem 3rem;
+    max-width: 70rem;
+    line-height: 2rem;
+    letter-spacing: .75px;
   }
   &__item {
     font-weight: bold;
     line-height: 2.2rem;
+    list-style-type: disc;
   }
 }
 .options {
@@ -118,13 +129,11 @@
       .options__title {
         font-weight: bold;
       }
-
       .options__buyBTN {
         display: inline-block;
       }
     }
   }
-
   &__title {
     padding: 1rem 0rem;
     text-decoration: underline;
@@ -168,7 +177,6 @@
       .donate__title {
         font-weight: bold;
       }
-
       .donate__buyBTN {
         display: inline-block;
       }
@@ -184,10 +192,14 @@
     font-weight: 700;
   }
   &__details {
-    padding: 4rem 0 2rem 0;
+    padding: 4rem 0 2rem 0; 
   }
   &__text{
     padding: 2rem 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    line-height: 2.2rem;
+    letter-spacing: .5px;
   }
   &__buyBTN {
     height: 4rem;

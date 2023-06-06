@@ -13,7 +13,7 @@ const Footer = forwardRef(({ aboutSectionRef, newsSectionRef, memberTopRef, dona
     if (aboutSectionRef.current) {
       aboutSectionRef.current.scrollIntoView({
         behavior: "smooth",
-        block: "center",
+        block: "start",
       });
     }
   };

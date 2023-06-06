@@ -1,9 +1,20 @@
 import "./MemberForm.scss";
 import React, { forwardRef, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
-const MemberForm = forwardRef(({ memberFormTopRef }, ref) => {
+const MemberForm = forwardRef(({ memberFormTopRef, homeTopRef }, ref) => {
   const form = useRef();
+  const navigate = useNavigate();
+
+  const scrollToHomeTop = () => {
+    if (homeTopRef.current) {
+      homeTopRef.current.scrollIntoView({
+        behavior: "smooth",
+        top: 0,
+      });
+    }
+  };
 
   const [volunteerCheckbox, setVolunteerCheckbox] = useState(false);
   const [activityCheckboxA, setActivityCheckboxA] = useState(false);
@@ -28,6 +39,11 @@ const MemberForm = forwardRef(({ memberFormTopRef }, ref) => {
       .then(
         (result) => {
           console.log(result.text);
+          alert(
+            `Thank you for your support.  Your annual membership will become active once we receive your member fee of $10. `
+          );
+          navigate("/");
+          setTimeout(scrollToHomeTop), 100;
         },
         (error) => {
           console.log(error.text);
@@ -38,11 +54,14 @@ const MemberForm = forwardRef(({ memberFormTopRef }, ref) => {
 
   return (
     <main className="memberform__section" ref={memberFormTopRef}>
-      <h2 className="memberform__title">General Member Form</h2>
-      <p>
+      <h2 className="memberform__title">Annual Membership Form</h2>
+      <p className="memberform__text">
         To become a member of the Slocan and Area Trail Society, please fill out
         the member form details below and send an e-transfer from your
-        institution for $10.00 to: www.slocanandareatrailsociety@gmail.com
+        institution for $10.00 to:
+        <p className="memberform__email">
+          www.slocanandareatrailsociety@gmail.com
+        </p>
       </p>
       <form
         ref={form}
@@ -225,10 +244,9 @@ const MemberForm = forwardRef(({ memberFormTopRef }, ref) => {
           <textarea
             className="memberform__message-field memberform__field"
             placeholder="PLEASE SHARE ANY RELEVENT SKILLS, INTERESTS OR IDEAS"
-            name="message"
+            name="messageA"
           />
         </div>
-
         <input className="memberform__button" type="submit" value="Send" />
       </form>
     </main>

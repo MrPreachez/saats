@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import MembershipPage from "./pages/MembershipPage/MembershipPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import MemberForm from "./pages/MemberForm/MemberForm";
+import BusinessForm from "./pages/BusinessForm/BusinessForm";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useRef } from "react";
 import React from "react";
@@ -16,6 +17,8 @@ function App() {
   const memberTopRef = useRef(null);
   const donateSectionRef = useRef(null);
   const memberFormTopRef = useRef();
+  const businessFormTopRef = useRef();
+  const homeTopRef = useRef();
 
   return (
     <div className="App">
@@ -29,12 +32,12 @@ function App() {
             path="/"
             element={
               <HomePage
+                homeTopRef ={homeTopRef}
                 aboutSectionRef={aboutSectionRef}
                 newsSectionRef={newsSectionRef}
                 headerMenuRef={headerMenuRef}
                 memberTopRef={memberTopRef}
                 donateSectionRef={donateSectionRef}
-                memberFormTopRef={memberFormTopRef}
               />
             }
           />
@@ -45,13 +48,18 @@ function App() {
                 memberTopRef={memberTopRef}
                 donateSectionRef={donateSectionRef}
                 memberFormTopRef={memberFormTopRef}
+                businessFormTopRef={businessFormTopRef}
               />
             }
           />
           <Route path="/contact" element={<ContactPage />} />
           <Route
-            path="/memberForm"
-            element={<MemberForm memberFormTopRef={memberFormTopRef} />}
+            path="/memberform"
+            element={<MemberForm memberFormTopRef={memberFormTopRef} homeTopRef={homeTopRef} />}
+          />
+          <Route
+            path="/businessform"
+            element={<BusinessForm businessFormTopRef={businessFormTopRef} homeTopRef={homeTopRef} />}
           />
           {/* <Route path="/donateForm" element={<DonateForm/>} /> */}
         </Routes>

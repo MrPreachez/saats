@@ -4,11 +4,10 @@
 @use "../../styles/partials/typography";
 @use "../../styles/partials/variables" as *;
 
-.memberform {
+.businessform {
   &__section {
     width: 100%;
     padding: 0 1rem 0 1rem;
-
   }
   &__title {
     padding: 4rem 0;
@@ -60,41 +59,40 @@
   &__subject-field {
     width: 100%;
   }
-  &__label{
+  &__label {
     font-weight: 700;
   }
-  &__subject-title{
-    margin:0 auto;
-
+  &__subject-title {
+    margin: 0 auto;
   }
   &__name--wrapper {
-    @extend .memberform__subject--wrapper;
+    @extend .businessform__subject--wrapper;
   }
   &__name-field {
     width: 100%;
   }
   &__email--wrapper {
-    @extend .memberform__subject--wrapper;
+    @extend .businessform__subject--wrapper;
   }
   &__email-field {
     width: 100%;
   }
   &__area--wrapper {
-    @extend .memberform__subject--wrapper;
+    @extend .businessform__subject--wrapper;
   }
-  &__area-field{
+  &__area-field {
     width: 100%;
   }
   &__message--wrapper {
-    @extend .memberform__subject--wrapper;
+    @extend .businessform__subject--wrapper;
   }
   &__volunteering--wrapper {
     padding-top: 2rem;
   }
-  &__activity-title{
+  &__activity-title {
     padding: 2rem 0 1rem 0;
   }
-  &__activity-Container{
+  &__activity-Container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +106,7 @@
     font-family: $font-stack;
   }
   &__button {
-    margin:0 auto;
+    margin: 0 auto;
     height: 4rem;
     width: 80%;
     font-size: 1.4rem;
@@ -119,6 +117,5 @@
     border: 2px solid $primaryB;
     border-radius: 5px;
     box-shadow: 0.1rem 0.1rem 0.1rem $secondaryC;
-
   }
 }
