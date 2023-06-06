@@ -2,15 +2,25 @@ import { forwardRef } from "react";
 import "./MembershipPage.scss";
 import { useNavigate } from "react-router-dom";
 
-
-const MembershipPage = forwardRef(({ memberTopRef, donateSectionRef }, ref) => {
+const MembershipPage = forwardRef(({ memberTopRef, donateSectionRef, memberFormTopRef }, ref) => {
   const navigate = useNavigate();
+
+  const scrollToTopSection = () => {
+    if (memberFormTopRef) {
+      memberFormTopRef.current.scrollIntoView({
+        behavior: "smooth",
+        top: 0,
+      });
+    }
+  };
   const handleGeneralMemberBtn = () => {
-    navigate("/memberform")
-  }
+    navigate("/memberform");
+    setTimeout(scrollToTopSection, 100) ;
+  };
+
   const handleBusinessMemberBtn = () => {
-    navigate("/memberform")
-  }
+    navigate("/memberform");
+  };
   return (
     <section className="memberpage" id="memberTop" ref={memberTopRef}>
       <section className="memberpage__hero">
@@ -73,14 +83,19 @@ const MembershipPage = forwardRef(({ memberTopRef, donateSectionRef }, ref) => {
           <div className="options__card-wrapA">
             <section className="options__cardA options__card">
               <h3 className="options__title">General Membership</h3>
-              <h3 className="options__price">$15.00</h3>
+              <h3 className="options__price">$10.00</h3>
               <p className="options__details">
                 Get an anual membership and support SATS initiatives. Future
                 member perks will follow in time, but for now bask in the
                 opportunity to support local trail enhancement projects and
                 planning.
               </p>
-              <button onClick={handleGeneralMemberBtn}className="options__buyBTN">Buy</button>
+              <button
+                onClick={handleGeneralMemberBtn}
+                className="options__buyBTN"
+              >
+                Buy
+              </button>
             </section>
           </div>
           <div className="options__card-wrapB">
@@ -93,9 +108,12 @@ const MembershipPage = forwardRef(({ memberTopRef, donateSectionRef }, ref) => {
                 your logo will be highlighted on our sponsorship page and on
                 annual promotional material.
               </p>
-              <button 
-              onClick={handleBusinessMemberBtn}
-              className="options__buyBTN">Buy</button>
+              <button
+                onClick={handleBusinessMemberBtn}
+                className="options__buyBTN"
+              >
+                Buy
+              </button>
             </section>
           </div>
         </div>

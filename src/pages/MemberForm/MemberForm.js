@@ -1,12 +1,13 @@
 import "./MemberForm.scss";
-import React, { useRef, useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-function MemberForm() {
+const MemberForm = forwardRef(({ memberFormTopRef }, ref) => {
   const form = useRef();
 
   const [volunteerCheckbox, setVolunteerCheckbox] = useState(false);
   const [activityCheckboxA, setActivityCheckboxA] = useState(false);
+  const [activityCheckboxB, setActivityCheckboxB] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,12 +31,12 @@ function MemberForm() {
   };
 
   return (
-    <main className="memberform__section">
-      <h2 className="memberform__title">Member Form</h2>
+    <main className="memberform__section" ref={memberFormTopRef}>
+      <h2 className="memberform__title">General Member Form</h2>
       <p>
         To become a member of the Slocan and Area Trail Society, please fill out
-        the memberform form details below and send an e-transfer from your
-        institution for `(${})` to: www.slocanandareatrailsociety@gmail.com
+        the member form details below and send an e-transfer from your
+        institution for $10.00 to: www.slocanandareatrailsociety@gmail.com
       </p>
       <form
         ref={form}
@@ -90,7 +91,7 @@ function MemberForm() {
           <input
             className="memberform__area-field memberform__field"
             type="text"
-            placeholder="ENTER THE NEAREST TOWN OR CITY YOU LIVE BY"
+            placeholder="ENTER CITY OR TOWN YOU LIVE NEAR"
             name="member_area"
           />
         </div>
@@ -108,20 +109,36 @@ function MemberForm() {
             opportunities? Share more details about your skills below.
           </label>
         </div>
-        <p>What activities do you enjoy doing on local trails.</p>
-        <div className="memberform__activity--wrapperA">
-          <input
-            className="activityCheckboxA memberform__field"
-            type="checkbox"
-            id="activityID"
-            checked={activityCheckboxA}
-            name="activityCheckboxA"
-            onChange={(e) => setActivityCheckboxA(e.target.checked)}
-          />
-          <label className="memberform__volunteering memberform__label">
-            mountain biking
-          </label>
+        <p className="memberform__activity-title">What activities do you enjoy doing on local trails.</p>
+        <div className="memberform__activity-Container">
+          <div className="memberform__activity--wrapperA">
+            <input
+              className="activityCheckboxA memberform__field"
+              type="checkbox"
+              id="activityID"
+              checked={activityCheckboxA}
+              name="activityCheckboxA"
+              onChange={(e) => setActivityCheckboxA(e.target.checked)}
+            />
+            <label className="memberform__volunteering memberform__label">
+              mountain biking
+            </label>
+          </div>
+          <div className="memberform__activity--wrapperB">
+            <input
+              className="activityCheckboxB memberform__field"
+              type="checkbox"
+              id="activityID"
+              checked={activityCheckboxB}
+              name="activityCheckboxB"
+              onChange={(e) => setActivityCheckboxB(e.target.checked)}
+            />
+            <label className="memberform__volunteering memberform__label">
+              Hiking
+            </label>
+          </div>
         </div>
+
         <div className="memberform__message--wrapper">
           <label className="memberform__message memberform__label">
             Tell Us About Yourself
@@ -137,6 +154,6 @@ function MemberForm() {
       </form>
     </main>
   );
-}
+});
 
 export default MemberForm;

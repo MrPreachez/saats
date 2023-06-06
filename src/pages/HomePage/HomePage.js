@@ -7,7 +7,7 @@ import { forwardRef } from "react";
 
 
 
-const HomePage = forwardRef(({aboutSectionRef, newsSectionRef, memberTopRef, donateSectionRef}, ref) => {
+const HomePage = forwardRef(({aboutSectionRef, newsSectionRef, memberTopRef, donateSectionRef, memberFormTopRef}, ref) => {
   const navigate = useNavigate();
   const location = useLocation();
 

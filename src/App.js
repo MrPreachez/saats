@@ -15,12 +15,7 @@ function App() {
   const headerMenuRef = useRef(null);
   const memberTopRef = useRef(null);
   const donateSectionRef = useRef(null);
-
-  // const handleScrollTo = (ref) => {
-  //   if (ref.current) {
-  //     ref.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
+  const memberFormTopRef = useRef();
 
   return (
     <div className="App">
@@ -39,6 +34,7 @@ function App() {
                 headerMenuRef={headerMenuRef}
                 memberTopRef={memberTopRef}
                 donateSectionRef={donateSectionRef}
+                memberFormTopRef={memberFormTopRef}
               />
             }
           />
@@ -48,11 +44,15 @@ function App() {
               <MembershipPage
                 memberTopRef={memberTopRef}
                 donateSectionRef={donateSectionRef}
+                memberFormTopRef={memberFormTopRef}
               />
             }
           />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/memberForm" element={<MemberForm/>} />
+          <Route
+            path="/memberForm"
+            element={<MemberForm memberFormTopRef={memberFormTopRef} />}
+          />
           {/* <Route path="/donateForm" element={<DonateForm/>} /> */}
         </Routes>
         <Footer
