@@ -95,7 +95,7 @@ const MemberForm = forwardRef(({ memberFormTopRef, homeTopRef }, ref) => {
           />
         </div>
         <div className="memberform__email--wrapper">
-          <label className="memberform__email memberform__label">Email</label>
+          <label className="memberform__email-label memberform__label">Email</label>
           <input
             className="memberform__email-field memberform__field"
             type="email"

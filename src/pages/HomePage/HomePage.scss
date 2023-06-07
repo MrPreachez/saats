@@ -9,6 +9,7 @@
     width: 100%;
   }
 }
+
 .head {
   &__hero {
     max-width: 100%;
@@ -54,6 +55,8 @@
     width: 90%;
     @include tablet {
       font-size: 6rem;
+      padding-bottom: 2rem;
+      letter-spacing: .5px;
     }
   }
   &__title2 {
@@ -61,6 +64,7 @@
     font-size: 3.5rem;
     @include tablet {
       font-size: 4.5rem;
+      letter-spacing: .5px;
     }
   }
   &__CTA--position {
@@ -71,21 +75,28 @@
     margin: 30rem 0 0 0;
     @include tablet {
         align-items: flex-end;
-        margin: 50rem 0 0 0;
+        margin: 40rem 0 0 0;
         gap: 2rem;
     }
   }
 &__CTA {
-    min-width: 20rem;
+    min-width: 20rem; 
+    &:hover{
+      font-size: 1.8rem;
+      border: 4px solid $primaryB;
+    }  
+    
     @include tablet {
         width: 28rem;
         height: 5rem;
-        font-size: 1.8rem;
-        
-    }
-}
+        font-size: 1.8rem; 
+        &:hover{
+          font-size: 2rem;
+         
+        }
+      }
+}}
 
-}
 .org {
   &__block {
     height: auto;
@@ -113,6 +124,7 @@
     }
   }
 
+
   &__title {
     color: $primaryB;
     font-weight: 700;
@@ -136,9 +148,16 @@
 
     @include tablet {
       padding: 4rem 0 2rem 0;
+      font-size: 2.8rem;
     }
   }
-
+  &__list{
+    padding: 0 1rem;
+  }
+  &__item{
+    list-style: disc;
+    font-weight: 600;
+  }
   &__description {
     text-align: left;
     padding-left: 1rem;
@@ -150,6 +169,21 @@
   }
   &__section {
     max-width: 50rem;
+  }
+}
+.about {
+  &__title {
+    padding: 1rem;
+    @include tablet{
+      font-size: 3rem;
+      padding: 2rem 0 4rem;
+    }
+  }
+  &__intro {
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 2.2rem;
+    letter-spacing: .5px;
   }
 }
 
@@ -177,16 +211,7 @@
     font-weight: 600;
   }
 }
-.about {
-    
-  &__title {
-    padding: 1rem;
-  }
-  &__intro {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-}
+
 .current {
   &__body {
     height: auto;
@@ -222,9 +247,12 @@
   &__text {
     max-width: 46rem;
     margin: 2rem;
+    line-height: 2.2rem;
+    letter-spacing: .5px;
   }
   &__imgContainer {
     max-width: 50rem;
+    padding: 0 1rem;
   }
   &__imgPhoto {
     width: 100%;
@@ -232,7 +260,6 @@
     box-shadow: $shadow;
   }
 }
-
 .details {
   &__body {
     height: 20rem;

@@ -125,9 +125,7 @@ const scrollToDonate = () => {
                     News
                   </a>
                 </li>
-                <li className="menu__listItem">
-                  <Link className="menu__item--link">Trails</Link>
-                </li>
+                
                 <li className="menu__listItem">
                   <a 
                   href="#memberTop"

@@ -28,7 +28,10 @@ function ContactPage() {
   return (
     <main className="contact__section">
       <h2 className="contact__title">Contact SATS</h2>
-      <p>To contact the Slocan and Area Trail Society, please fill out the contact form below and someone will get back to you as promptly as possible.</p>
+      <p className="contact__text">
+        To contact the Slocan and Area Trail Society, please fill out the
+        contact form below and someone will get back to you promptly.
+      </p>
       <form ref={form} onSubmit={sendEmail} className="contact__form">
         <div className="contact__subject--wrapper">
           <label className="contact__subject contact__label">Subject</label>

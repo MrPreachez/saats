@@ -72,6 +72,12 @@ const Header = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
             >
               News
             </a>
+            <a
+              href="/membership"
+              className="nav__link nav__link--tablet-only"
+            >
+              Membership
+            </a>
 
             <button
               href="#footer"
@@ -81,9 +87,10 @@ const Header = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
               <p className="nav__link-menuText">Menu</p>
               <FiChevronsDown className="chevron" size={30} color="#D4A373" />
             </button>
-            <Link className="nav__link nav__link--tablet-only">Trails</Link>
 
-            <Link className="nav__link">Sign In</Link>
+            {/* <Link className="nav__link nav__link--tablet-only">Trails</Link>
+
+            <Link className="nav__link">Sign In</Link> */}
           </div>
         </div>
       </div>

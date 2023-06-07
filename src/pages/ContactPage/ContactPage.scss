@@ -5,23 +5,22 @@
 @use "../../styles/partials/variables" as *;
 
 
-
 .contact {
     &__section{
         width: 100%;
         padding: 0 1rem 0 1rem;
-
-        @include tablet {
-            height: 80vh;
-        }
         
     }
     &__title {
-        padding: 2rem 2rem 0 2rem;
+        padding: 2rem;
 
         @include tablet {
-            padding: 8rem 0 0 0;
+            padding: 8rem 0 4rem 0;
         }
+    }
+    &__text{
+        max-width:80rem;
+        margin: 0 auto;
     }
     &__form {
         padding:2rem;
@@ -71,7 +70,16 @@
         font-family: $font-stack;
     }
     &__button {
-        height: 2.4rem;
-        border-radius: 6px;
-    }
+        margin: 0 auto;
+        height: 4rem;
+        width: 80%;
+        font-size: 1.4rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: Black;
+        background-color: rgba($secondaryA, 65%);
+        border: 2px solid $primaryB;
+        border-radius: 5px;
+        box-shadow: 0.1rem 0.1rem 0.1rem $secondaryC;
+      }
 }
