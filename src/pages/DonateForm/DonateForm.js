@@ -32,7 +32,8 @@ const DonateForm = forwardRef(({ donateFormTopRef }, ref) => {
         "Your donation makes a difference in our mission to maintain and build
         trails in the Slocan area!"
       </h3>
-      <p className="donateform__text1">
+      <div className="donateform__text-body">
+              <p className="donateform__text1">
         To make a donation the Slocan and Area Trail Society, please{" "}
         <b>first</b> send your donation via etransfer from your institution to:
         <span className="donateform__mailto">
@@ -70,6 +71,8 @@ const DonateForm = forwardRef(({ donateFormTopRef }, ref) => {
           </ul>
         </div>
       </div>
+      </div>
+
 
       <form ref={form} onSubmit={sendEmail} className="donateform__form">
         <div className="donateform__subject--wrapper">
