@@ -13,12 +13,42 @@
     padding: 2rem;
 
     @include tablet {
-      padding: 8rem 0 4rem 0;
+      padding: 6rem 0 4rem 0;
     }
   }
-  &__text {
+  &__subheading {
+    padding: 1rem;
+    @include tablet {
+      padding: 2rem 0rem;
+    }
+  }
+  &__text1 {
     max-width: 80rem;
     margin: 0 auto;
+    padding: 0 0 1rem 0;
+  }
+  &__mailto {
+    font-weight: 700;
+  }
+  &__text2 {
+    padding: 0 0 1rem 0;
+  }
+  &__addDetails--wrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__addDetails {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__addDetails-head {
+    padding: 1rem 0;
+  }
+  &__item {
+    text-align: left;
   }
   &__form {
     padding: 2rem;
