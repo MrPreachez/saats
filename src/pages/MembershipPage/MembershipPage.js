@@ -4,7 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 const MembershipPage = forwardRef(
   (
-    { memberTopRef, donateSectionRef, memberFormTopRef, businessFormTopRef },
+    {
+      memberTopRef,
+      donateSectionRef,
+      memberFormTopRef,
+      businessFormTopRef,
+      donateFormTopRef,
+    },
     ref
   ) => {
     const navigate = useNavigate();
@@ -33,6 +39,18 @@ const MembershipPage = forwardRef(
     const handleBusinessMemberBtn = () => {
       navigate("/businessform");
       setTimeout(scrollToTopFormB, 100);
+    };
+    const scrollToTopFormC = () => {
+      if (donateFormTopRef) {
+        donateFormTopRef.current.scrollIntoView({
+          behavior: "smooth",
+          top: 0,
+        });
+      }
+    };
+    const handleDonateFormBtn = () => {
+      navigate("/donateform");
+      setTimeout(scrollToTopFormC, 100);
     };
     return (
       <section className="memberpage" id="memberTop" ref={memberTopRef}>
@@ -147,7 +165,9 @@ const MembershipPage = forwardRef(
               and goes directly back into the process of building and sustaining
               trails in the Slocan Area.
             </p>
-            <button className="donate__buyBTN">Donate</button>
+            <button className="donate__buyBTN" onClick={handleDonateFormBtn}>
+              Donate
+            </button>
           </section>
           <p className="donate__text">
             A donation to SATS goes back into your community. All donations will

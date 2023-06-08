@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import MembershipPage from "./pages/MembershipPage/MembershipPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import MemberForm from "./pages/MemberForm/MemberForm";
+import DonateForm from "./pages/DonateForm/DonateForm";
 import BusinessForm from "./pages/BusinessForm/BusinessForm";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useRef } from "react";
@@ -19,6 +20,7 @@ function App() {
   const memberFormTopRef = useRef();
   const businessFormTopRef = useRef();
   const homeTopRef = useRef();
+  const donateFormTopRef = useRef();
 
   return (
     <div className="App">
@@ -49,6 +51,7 @@ function App() {
                 donateSectionRef={donateSectionRef}
                 memberFormTopRef={memberFormTopRef}
                 businessFormTopRef={businessFormTopRef}
+                donateFormTopRef={donateFormTopRef}
               />
             }
           />
@@ -61,7 +64,7 @@ function App() {
             path="/businessform"
             element={<BusinessForm businessFormTopRef={businessFormTopRef} homeTopRef={homeTopRef} />}
           />
-          {/* <Route path="/donateForm" element={<DonateForm/>} /> */}
+          <Route path="/donateform" element={<DonateForm donateFormTopRef={donateFormTopRef}/>} />
         </Routes>
         <Footer
           aboutSectionRef={aboutSectionRef}
