@@ -16,7 +16,7 @@ const MemberForm = forwardRef(({ memberFormTopRef, homeTopRef }, ref) => {
   const [activityCheckboxF, setActivityCheckboxF] = useState(false);
   const [activityCheckboxG, setActivityCheckboxG] = useState(false);
   const [activityCheckboxH, setActivityCheckboxH] = useState(false);
- 
+
   const scrollToHomeTop = () => {
     if (homeTopRef.current) {
       homeTopRef.current.scrollIntoView({
@@ -43,7 +43,7 @@ const MemberForm = forwardRef(({ memberFormTopRef, homeTopRef }, ref) => {
             `Thank you for your support.  Your annual membership will become active once we receive your member fee of $10. `
           );
           navigate("/");
-          setTimeout(scrollToHomeTop), 100;
+          setTimeout(scrollToHomeTop, 100);
         },
         (error) => {
           console.log(error.text);
@@ -95,7 +95,9 @@ const MemberForm = forwardRef(({ memberFormTopRef, homeTopRef }, ref) => {
           />
         </div>
         <div className="memberform__email--wrapper">
-          <label className="memberform__email-label memberform__label">Email</label>
+          <label className="memberform__email-label memberform__label">
+            Email
+          </label>
           <input
             className="memberform__email-field memberform__field"
             type="email"
