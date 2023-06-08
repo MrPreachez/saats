@@ -7,15 +7,6 @@ const MemberForm = forwardRef(({ memberFormTopRef, homeTopRef }, ref) => {
   const form = useRef();
   const navigate = useNavigate();
 
-  const scrollToHomeTop = () => {
-    if (homeTopRef.current) {
-      homeTopRef.current.scrollIntoView({
-        behavior: "smooth",
-        top: 0,
-      });
-    }
-  };
-
   const [volunteerCheckbox, setVolunteerCheckbox] = useState(false);
   const [activityCheckboxA, setActivityCheckboxA] = useState(false);
   const [activityCheckboxB, setActivityCheckboxB] = useState(false);
@@ -25,6 +16,15 @@ const MemberForm = forwardRef(({ memberFormTopRef, homeTopRef }, ref) => {
   const [activityCheckboxF, setActivityCheckboxF] = useState(false);
   const [activityCheckboxG, setActivityCheckboxG] = useState(false);
   const [activityCheckboxH, setActivityCheckboxH] = useState(false);
+ 
+  const scrollToHomeTop = () => {
+    if (homeTopRef.current) {
+      homeTopRef.current.scrollIntoView({
+        behavior: "smooth",
+        top: 0,
+      });
+    }
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();

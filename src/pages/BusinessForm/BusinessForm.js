@@ -7,14 +7,6 @@ const BusinessForm = forwardRef(({ businessFormTopRef, homeTopRef }, ref) => {
   const form = useRef();
   const navigate = useNavigate();
 
-  const scrollToHomeTop = () => {
-    if (homeTopRef.current) {
-      homeTopRef.current.scrollIntoView({
-        behavior: "smooth",
-        top: 0,
-      });
-    }
-  };
 
   const sendEmail = (e) => {
     e.preventDefault();
