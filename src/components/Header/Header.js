@@ -1,7 +1,8 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { FiChevronsDown } from "react-icons/fi";
 import "./Header.scss";
 import { forwardRef } from "react";
+
 
 const Header = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
   const navigate = useNavigate();
@@ -72,12 +73,12 @@ const Header = forwardRef(({ aboutSectionRef, newsSectionRef }, ref) => {
             >
               News
             </a>
-            <a
-              href="/membership"
+            <NavLink
+              to="/membership"
               className="nav__link nav__link--tablet-only"
             >
               Membership
-            </a>
+            </NavLink>
 
             <button
               href="#footer"
