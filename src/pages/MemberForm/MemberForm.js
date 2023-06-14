@@ -59,10 +59,16 @@ const MemberForm = forwardRef(({ memberFormTopRef, homeTopRef }, ref) => {
         To become a member of the Slocan and Area Trail Society, please fill out
         the member form details below and send an e-transfer from your
         institution for $10.00 to:
-        <p className="memberform__email">
-          www.slocanandareatrailsociety@gmail.com
-        </p>
       </p>
+      <p className="memberform__email">
+        www.slocanandareatrailsociety@gmail.com
+      </p>
+      <p>
+        If you prefer to pay by cheque, please make out to{" "}
+        <b>Slocan and Area Trail Society</b> and send to:
+      </p>
+      <p>PO Box 332</p>
+      <p>Slocan BC V0G 2C0</p>
       <form
         ref={form}
         id="myForm"
@@ -251,6 +257,12 @@ const MemberForm = forwardRef(({ memberFormTopRef, homeTopRef }, ref) => {
         </div>
         <input className="memberform__button" type="submit" value="Send" />
       </form>
+      <p className="memberform__disclaimer">
+        Please note, by becoming a member of the Slocan and Area Trail Society
+        you are in agreement with our mission. As a member, any activities that
+        represent bad faith towards the organization and its mission represent
+        due cause for discontinuation of membership.{" "}
+      </p>
     </main>
   );
 });
