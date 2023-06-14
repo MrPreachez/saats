@@ -177,11 +177,19 @@ const HomePage = forwardRef(
                 <div className="board__section">
                   <h3 className="board__title">Board of Directors</h3>
                   <ul className="board__list-members">
-                    <li className="board__member">Jessie Novak</li>
-                    <li className="board__member">Courtney Russell</li>
-                    <li className="board__member">Dave Fredrickson</li>
-                    <li className="board__member">Blaise Beckjord</li>
-                    <li className="board__member">Damon Chouinard</li>
+                    <li className="board__member">Jessie Novak - Chair</li>
+                    <li className="board__member">
+                      Blaise Beckjord - Vice Chair
+                    </li>
+                    <li className="board__member">
+                      Damon Chouinard - Treasurer
+                    </li>
+                    <li className="board__member">
+                      Courtney Hulbert - Secretary
+                    </li>
+                    <li className="board__member">
+                      Dave Fredrickson - General Director
+                    </li>
                   </ul>
                 </div>
                 <div className="mission__section">
@@ -202,7 +210,9 @@ const HomePage = forwardRef(
                         Provide a sustainable network of recreational trails for
                         a diverse range of users
                       </li>
-                      <li className="mission__item">Help preserve public access to public land</li>
+                      <li className="mission__item">
+                        Help preserve public access to public land
+                      </li>
                       <li className="mission__item">
                         Respect and recognition for First Nations' and wildlife
                         interest
@@ -212,14 +222,18 @@ const HomePage = forwardRef(
                         members of the public (ie. land owners, tenure holders,
                         licensee holders)
                       </li>
-                      <li className="mission__item">Preserve the culture heritage of the area</li>
+                      <li className="mission__item">
+                        Preserve the culture heritage of the area
+                      </li>
                       <li className="mission__item">
                         Secure recreation opportunities for all trail users
                       </li>
-                      <li className="mission__item">Provide educational opportunities for the public</li>
                       <li className="mission__item">
-                        Empower youth to work on the trail building and related
-                        community service mission
+                        Provide educational opportunities for the public
+                      </li>
+                      <li className="mission__item">
+                        Empower youth to work on trail building opportunities
+                        and related community service mission
                       </li>
                     </ul>
                   </a.div>
@@ -242,16 +256,16 @@ const HomePage = forwardRef(
               Comprised of old mining/resource roads, this unmanaged trail is in
               need of brushing, minor drainage works, and bucking. All work
               during this phase will be carried out by volunteers, with the aim
-              to begin in late May, before fire season. The green lines on the
-              following map represents the discussed area. <br />
-              Looking ahead, we will be developing our first comprehensive
-              project proposal for the Ottawa Hill area, which will include the
-              creation of new hiking and mountain biking trails. Our plan aligns
-              with BC's trails strategy to benefit recreationists, communities,
-              First Nations, and the province as a whole. As we move forward
-              with this exciting endeavor, we look forward to building member
-              support from our community members, local businesses, and
-              community stakeholders.
+              to begin before fire season. The green lines on the following map
+              represents the discussed area. <br />
+              Looking ahead, we are excited to develop an engagement process for
+              the community that considers the interests and concerns of
+              community members and user groups. Our aim is to create a
+              recreation plan for the area that aligns with BC's trails
+              strategy, benefiting recreationists, communities, First Nations,
+              and the province as a whole. As we progress with this exciting
+              endeavor, we are continuing to garner support from our community
+              members, local businesses, and stakeholders.
               <Link to="/"></Link>
             </a.p>
             <a.div

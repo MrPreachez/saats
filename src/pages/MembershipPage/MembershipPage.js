@@ -77,10 +77,10 @@ const MembershipPage = forwardRef(
               individuals who share your interests and values. Our community is
               diverse and welcoming, with members ranging from hikers and
               bikers, ATV’ers, horse enthusiasts and everything in between. We
-              believe that everyone should have access to our backcountry areas,
-              and our members share a commitment to preserving and improving
-              that access in a responsible way. As a member of SATS, you will
-              have access to a variety of benefits, including:
+              believe in stewarding our backcountry areas, and our members share
+              a commitment to preserving and improving the backountry in a
+              responsible way. As a member of SATS, you will have access to a
+              variety of benefits, including:
             </p>
             <div className="memberInfo__benefits-container"></div>
             <ul className="memberInfo__benefits">
@@ -103,7 +103,7 @@ const MembershipPage = forwardRef(
               We believe that our members are the heart and soul of SATS, and we
               are committed to providing a supportive and inclusive community
               for all. Whether you're a seasoned trail veteran or just starting
-              out, we welcome you to join us and help us build a brighter future
+              out, we welcome you to join us and help us build a bright future
               for backcountry road access and trail development around Slocan.
             </p>
           </div>

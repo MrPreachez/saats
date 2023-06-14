@@ -49,10 +49,16 @@ const BusinessForm = forwardRef(({ businessFormTopRef, homeTopRef }, ref) => {
         To become an annual business supporter of the Slocan and Area Trail
         Society, please fill out the member form details below and send an
         e-transfer from your institution for $100.00 to:
-        <p className="businessform__email">
-          www.slocanandareatrailsociety@gmail.com
-        </p>
       </p>
+      <p className="businessform__email">
+        www.slocanandareatrailsociety@gmail.com
+      </p>
+      <p>
+        If you prefer to pay by cheque, please make out to{" "}
+        <b>Slocan and Area Trail Society</b> and send to:
+      </p>
+      <p>PO Box 332</p>
+      <p>Slocan BC V0G 2C0</p>
       <form
         ref={form}
         id="myForm"

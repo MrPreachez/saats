@@ -260,8 +260,8 @@ const MemberForm = forwardRef(({ memberFormTopRef, homeTopRef }, ref) => {
       <p className="memberform__disclaimer">
         Please note, by becoming a member of the Slocan and Area Trail Society
         you are in agreement with our mission. As a member, any activities that
-        represent bad faith towards the organization and its mission represent
-        due cause for discontinuation of membership.{" "}
+        represent bad faith towards the organization and its mission may
+        represent due cause for discontinuation of membership.{" "}
       </p>
     </main>
   );
